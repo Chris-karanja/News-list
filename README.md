@@ -19,7 +19,7 @@ The Application enables users to view news highlights from popular news outlets 
     - Python 3.6 required
 
 ## Set-up and Installation
-    - `$ Git Clone `
+    - `$ Git Clone https://github.com/Chris-karanja/News-list.git`
     - Edit the start.sh file with your api key from the news.org website
     - Install python 3.6
     - Run chmod a+x start.py
