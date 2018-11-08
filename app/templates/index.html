@@ -2,13 +2,26 @@
 
 <!-- Content block -->
 {% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h1>Stay up to date with news from the most trusted sources</h1>
+    </div>
+</div>
 
 <!-- News Sources -->
 
-    <ul>
-        {% for news_source in sources %} 
-        <li>{{news_source.name}}</li>
+    {% for news_source in sources %} 
+<div class="container">
+    <div class="col-md-12">
+        <div class="jumbotron">
+            <div class="container">
+                <h2>{{news_source.name}}</h2>
+                <p>{{news_source.description}}</p>
+                <a href="/articles/{{news_source.id}}"><button class="btn btn-primary">Read Articles</button></a>
+            </div>
+        </div>
+    </div>
+</div>
         {% endfor %} 
-    </ul>
-    
+
 {% endblock%}
