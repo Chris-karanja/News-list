@@ -62,9 +62,12 @@ def get_source_news(news_source):
     with urllib.request.urlopen(get_source_news_url) as url:
         source_news_data = url.read()
         source_news_response = json.loads(source_news_data)
-         source_news_results = None
-        if source_news_response['articles']:
-            source_news_results = process_source_news(source_news_response['articles'])
+
+        source_news_results = None
+
+    if source_news_response['articles']:
+        source_news_results = process_source_news(source_news_response['articles'])
+
     return source_news_results
 
 # process results from get_source_news
@@ -87,4 +90,3 @@ def process_source_news(fetched_articles):
     return source_news_list 
 
 
-    
