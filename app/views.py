@@ -9,6 +9,6 @@ def index():
     
     #getting movie sources
     news_sources = get_sources('sources')
-    print(news_sources)
+    #print(news_sources)
 
     return render_template('index.html', sources = news_sources)

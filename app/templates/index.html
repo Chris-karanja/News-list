@@ -1,7 +1,14 @@
-<h1>News Highlight</h1>
-<ul>
-    {% for news_source in sources %}
-    <li>{{news_source.name}}</li>
-    {% endfor %}
-</ul>
+{% extends 'base.html'%}
 
+<!-- Content block -->
+{% block content %}
+
+<!-- News Sources -->
+
+    <ul>
+        {% for news_source in sources %} 
+        <li>{{news_source.name}}</li>
+        {% endfor %} 
+    </ul>
+    
+{% endblock%}
