@@ -1,2 +1,7 @@
 <h1>News Highlight</h1>
+<ul>
+    {% for news_source in sources %}
+    <li>{{news_source.name}}</li>
+    {% endfor %}
+</ul>
 
