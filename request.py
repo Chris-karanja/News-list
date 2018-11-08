@@ -11,6 +11,9 @@ api_key = app.config['SOURCE_API_KEY']
 #get base url
 base_url = app.config['NEWS_API_BASE_URL']
 
+#get articles url
+article_url = app.config['SOURCE_ARTICLES_URL']
+
 def get_sources(source):
     ''' json response to url request '''
     
@@ -56,9 +59,10 @@ def process_sources(source_list):
     
     return source_results
 
-def get_source_news(news_source):
+# function to return articles from a source
+def get_source_news(id):
     ''' json to request to display news from a source id '''
-    get_source_news_url = base_url.format(id,api_key)
+    get_source_news_url = article_url.format(id,api_key)
     with urllib.request.urlopen(get_source_news_url) as url:
         source_news_data = url.read()
         source_news_response = json.loads(source_news_data)
