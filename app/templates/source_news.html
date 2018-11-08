@@ -3,6 +3,19 @@
 <div class="container">
     <div class="row">
         {% for article in news %}
+<div class="jumbotron col-md-12">
+    <h4> {{article.title}} </h4>
+    <div class="col-md-12">
+        <h3> {{article.title}} </h3>
+        <br><br>
+        <div class="container-fluid">
+            <img src="{{ article.urlToImage }}" alt="{{ article.title }} picture" class="img-responsive">
+            <br>
+            <a href="{{article.url}}"><button class="btn btn-primary">Read More ..</button></a>
+        </div>
+        <br><br>
+        <h6>Published on {{article.publishedAt}}</h6>
+    </div>
         <div class="col-md-12">
             <h4> {{article.title}} </h4>
         </div>
