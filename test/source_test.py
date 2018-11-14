@@ -1,7 +1,7 @@
 import unittest
 from .models import source
 Source = source.Source
-Source_News = source.Source_News
+
 
 class SourceTest(unittest.TestCase):
     ''' test class to test behavior of Source class '''
@@ -29,5 +29,3 @@ class SourceNewsTest(unittest.TestCase):
        
         self.assertTrue(isinstance(self.new_source_news,Source_News))
         
-if __name__ == '__main__':
-    unittest.main()
